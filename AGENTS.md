@@ -72,6 +72,13 @@ servidor estático simples ao testar a persistência de progresso.
   componente; para ações de destaque some `.btn-lg`. As seleções "mais"/
   "menos" do quiz são botões `.pill` com estado via classes (`.is-selected`,
   `.is-active` na linha) e `disabled`, não `<input type="radio">`.
+- **Cache-busting:** `index.html` referencia `styles.css`, `data.js` e
+  `app.js` com um parâmetro `?v=AAAAMMDDHHmm` (mesmo timestamp nos três).
+  Sempre que qualquer um desses arquivos for alterado, gere um novo
+  timestamp (`date +%Y%m%d%H%M`) e atualize o `?v=` dos três nos `<link>`/
+  `<script>` de `index.html` antes de commitar — sem isso, o GitHub Pages
+  (CDN + cache do navegador) pode continuar servindo a versão antiga por
+  um tempo depois do deploy.
 
 ## Como validar uma mudança antes de considerar pronta
 
