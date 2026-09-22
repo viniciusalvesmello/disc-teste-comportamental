@@ -94,7 +94,7 @@ const QUESTION_BLOCKS = [
   ],
   [
     { factor: 'D', text: 'Enfrento conflitos de forma direta' },
-    { factor: 'S', text: 'Gosto de trabalhar em equipe de forma constante' },
+    { factor: 'S', text: 'Sou uma presença constante e confiável na equipe' },
     { factor: 'I', text: 'Sou otimista mesmo em situações difíceis' },
     { factor: 'C', text: 'Prefiro precisão a velocidade' },
   ],
